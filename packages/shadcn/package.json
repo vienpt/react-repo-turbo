@@ -1,0 +1,11 @@
+{
+  "name": "@repo/shadcn",
+  "type": "module",
+  "scripts": {},
+  "exports": {
+    "./ui": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.ts"
+    }
+  }
+}
