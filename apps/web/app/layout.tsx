@@ -2,6 +2,7 @@ import "@repo/shadcn/globals.css";
 
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { AppHeader } from "./components/app-header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,7 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <div className="flex flex-col min-h-dvh">
+          <AppHeader />
+          <main className="flex-1 m-2 rounded-lg border">
+            <div className="container">{children}</div>
+          </main>
+        </div>
       </body>
     </html>
   );
