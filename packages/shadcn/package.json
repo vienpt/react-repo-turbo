@@ -6,13 +6,16 @@
   "exports": {
     "./globals.css": "./src/globals.css",
     "./postcss.config": "./postcss.config.mjs",
-    "./tailwind.config": "./tailwind.config.ts",
+    "./tailwind.config": "./tailwind.config.js",
     "./lib/*": "./src/lib/*.ts",
     "./hooks/*": [
       "./src/hooks/*.ts",
       "./src/hooks/*.tsx"
     ],
     "./components/*": "./src/components/*.tsx"
+  },
+  "scripts": {
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

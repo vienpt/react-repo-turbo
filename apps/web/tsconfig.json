@@ -11,6 +11,7 @@
     "next-env.d.ts",
     "next.config.js",
     "post.config.mjs",
+    "tailwind.config.js",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
