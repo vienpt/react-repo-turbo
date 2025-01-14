@@ -13,8 +13,10 @@
   "dependencies": {
     "@repo/shadcn": "workspace:*",
     "@repo/ui": "workspace:*",
+    "@tanstack/react-table": "^8.20.5",
     "lucide-react": "^0.468.0",
     "next": "15.1.0",
+    "nuqs": "^2.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -25,6 +27,7 @@
     "@types/react": "19.0.0",
     "@types/react-dom": "19.0.0",
     "autoprefixer": "^10.4.20",
+    "lodash-es": "^4.17.21",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.16",
     "typescript": "5.5.4"
