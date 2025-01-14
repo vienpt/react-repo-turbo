@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import { AppHeader } from "./components/app-header";
 
 import "@repo/shadcn/globals.css";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+import { PropsWithChildren } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,13 +28,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <div className="flex flex-col min-h-dvh">
-          <AppHeader />
-          <main className="flex-1 m-2 rounded-lg border">
-            <div className="container">{children}</div>
-          </main>
-        </div>
+        <NuqsAdapter>
+          <AppLayout>{children}</AppLayout>
+        </NuqsAdapter>
       </body>
     </html>
+  );
+}
+
+function AppLayout({ children }: PropsWithChildren) {
+  return (
+    <div className="flex flex-col min-h-dvh">
+      <AppHeader />
+      <main className="flex-1 m-2 rounded-lg border">
+        <div className="container">{children}</div>
+      </main>
+    </div>
   );
 }
