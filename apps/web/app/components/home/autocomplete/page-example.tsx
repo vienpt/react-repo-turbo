@@ -10,7 +10,8 @@ const listItems = ["hello world", "italia", "I love", "columns", "composables"];
 
 async function fetchListItems() {
   try {
-    const res = await new Promise((resolve) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const res: any = await new Promise((resolve) => {
       resolve({
         data: listItems,
       });

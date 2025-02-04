@@ -11,7 +11,10 @@ interface TableContextValue<T> {
   table: Table<T>;
 }
 
-const TableContext = createContext<TableContextValue<T> | undefined>(undefined);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const TableContext = createContext<TableContextValue<any> | undefined>(
+  undefined,
+);
 
 export function TableProvider<T>({
   children,
